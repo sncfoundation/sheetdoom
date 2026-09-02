@@ -7,6 +7,10 @@
 The chocolate-doom engine plus the free Freedoom WAD, stored in the cells, run by the cluster.
 A [Sheet-Native Computing Foundation](https://sncfoundation.github.io) demo · sci#6 · sheeternetes#52
 
+<img src="doom.gif" width="640" alt="DOOM running from an image that lives inside a spreadsheet">
+
+<sub>Real Freedoom/Chocolate Doom, running from an image materialized out of <code>cluster.xlsx</code>.</sub>
+
 </div>
 
 ---
