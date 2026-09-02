@@ -1,4 +1,4 @@
-# SheetDoom — a REAL, full DOOM: the chocolate-doom engine + the shareware WAD,
+# SheetDoom — a REAL, full DOOM: the chocolate-doom engine + the free Freedoom WAD,
 # played in your browser over noVNC. No js-dos, no CDN — a genuine Linux DOOM.
 # Build it, then pack the whole image INTO a spreadsheet with `sheetbuild import`.
 FROM debian:stable-slim
