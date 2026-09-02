@@ -1,6 +1,13 @@
-# SheetDoom — a tiny web-DOOM image. Build it, then pack the WHOLE thing into a
-# spreadsheet with `sheetbuild import` (see README). js-dos boots the freely
-# distributable shareware DOOM in the browser.
-FROM nginx:alpine
-COPY index.html /usr/share/nginx/html/index.html
-EXPOSE 80
+# SheetDoom — a REAL, full DOOM: the chocolate-doom engine + the shareware WAD,
+# played in your browser over noVNC. No js-dos, no CDN — a genuine Linux DOOM.
+# Build it, then pack the whole image INTO a spreadsheet with `sheetbuild import`.
+FROM debian:stable-slim
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      chocolate-doom doom-wad-shareware \
+      xvfb x11vnc fluxbox novnc websockify tini ca-certificates \
+ && rm -rf /var/lib/apt/lists/*
+COPY start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+EXPOSE 8080
+ENTRYPOINT ["/usr/bin/tini","--"]
+CMD ["/usr/local/bin/start.sh"]
