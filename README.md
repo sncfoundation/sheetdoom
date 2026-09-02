@@ -4,14 +4,14 @@
 
 **Real, full DOOM — packaged as a SICF image and run from a spreadsheet.**
 
-The chocolate-doom engine plus the shareware WAD, stored in the cells, run by the cluster.
+The chocolate-doom engine plus the free Freedoom WAD, stored in the cells, run by the cluster.
 A [Sheet-Native Computing Foundation](https://sncfoundation.github.io) demo · sci#6 · sheeternetes#52
 
 </div>
 
 ---
 
-Not js-dos, not a toy. This is the actual **chocolate-doom** engine with the shareware IWAD,
+Not js-dos, not a toy. This is the actual **chocolate-doom** engine with the Freedoom IWAD (a free, DOOM-compatible game),
 running in a Linux container over noVNC, so you play real DOOM in a browser with a keyboard. The
 twist: the container image itself is stored **inside a spreadsheet** ([SICF](https://github.com/sncfoundation/sci/blob/main/specs/sicf-v0.1.md)
 native mode), and the Sheeternetes kubelet materializes it back out and runs it. Execution is on
@@ -56,9 +56,8 @@ A full Linux DOOM (Debian + X + noVNC + the engine) is a couple hundred MB. Base
 thousands of cells — under the 10M-cell workbook limit, but the file gets heavy and Excel/Sheets
 will feel it. That's exactly what we're measuring in
 [sci#5](https://github.com/sncfoundation/sci/issues/5). For a snappier demo, a minimal
-framebuffer/ASCII DOOM build shrinks it a lot; the shareware WAD alone is ~4 MB.
+framebuffer/ASCII DOOM build shrinks it a lot; the WAD alone is a few MB.
 
 ---
 
-<sub>Apache-2.0. id Software owns DOOM; this repo ships only packaging + a launcher (chocolate-doom
-and the freely-distributable shareware WAD come from Debian). Do run DOOM on a spreadsheet. It reconciles. 💩</sub>
+<sub>Apache-2.0. id Software owns DOOM; this repo ships only packaging + a launcher (chocolate-doom and the free Freedoom WAD come from Debian main). Do run DOOM on a spreadsheet. It reconciles. 💩</sub>

@@ -3,7 +3,7 @@
 # Build it, then pack the whole image INTO a spreadsheet with `sheetbuild import`.
 FROM debian:stable-slim
 RUN apt-get update && apt-get install -y --no-install-recommends \
-      chocolate-doom doom-wad-shareware \
+      chocolate-doom freedoom \
       xvfb x11vnc fluxbox novnc websockify tini ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 COPY start.sh /usr/local/bin/start.sh
