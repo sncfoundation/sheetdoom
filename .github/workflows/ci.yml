@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Shell syntax
+        run: bash -n start.sh demo.sh
+      - name: ShellCheck
+        run: shellcheck -S warning start.sh demo.sh
+      - name: Manifest is valid JSON
+        run: jq empty doom.json
+      - name: Container image builds
+        run: docker build -t sheetdoom:ci .
